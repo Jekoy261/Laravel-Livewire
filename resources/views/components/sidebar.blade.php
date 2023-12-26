@@ -10,12 +10,29 @@
     </div>
 
     <nav class="mt-5">
+        <a class="flex items-center px-6 py-4 mt-2 text-gray-100 {{ request()->routeIs('pages_orders') ? 'bg-gray-700' : '' }} bg-opacity-25" href="{{ route('pages_orders') }}">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0-14 0m18 11l-6-6"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7H9.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3H8m2 0v1m0-8v1"></path>
+            </svg>
+
+            <span class="mx-3">{{ __('Orders') }}</span>
+        </a>
+
         <a class="flex items-center px-6 py-4 mt-2 text-gray-100 {{ request()->routeIs('pages_home') ? 'bg-gray-700' : '' }} bg-opacity-25" href="{{ route('pages_home') }}">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"></path>
             </svg>
 
             <span class="mx-3">{{ __('Home') }}</span>
+        </a>
+
+        <a class="flex items-center px-6 py-4 mt-2 text-gray-100 {{ request()->routeIs('pages_dashboard') ? 'bg-gray-700' : '' }} bg-opacity-25" href="{{ route('pages_dashboard') }}">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18h5.5v-4H6zm0-5h5.5V6H6zm6.5 5H18v-7h-5.5zm0-8H18V6h-5.5zM5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v2h2v2h-2v2h2v2h-2v2h2v2h-2v2q0 .825-.587 1.413T19 21z"></path>
+            </svg>
+
+            <span class="mx-3">{{ __('Dashboard') }}</span>
         </a>
 
         <a class="flex items-center px-6 py-4 text-gray-100 {{ request()->routeIs('pages_accounts') ? 'bg-gray-700' : '' }} bg-opacity-25" href="{{ route('pages_accounts') }}">
@@ -32,6 +49,15 @@
             </svg>
 
             <span class="mx-3">{{ __('Stocks') }}</span>
+        </a>
+
+        <a class="flex items-center px-6 py-4 text-gray-100 {{ request()->routeIs('pages_reports') ? 'bg-gray-700' : '' }} bg-opacity-25" href="{{ route('pages_reports') }}">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 18h8v2h-8zm0-5h12v2H10zm0 10h5v2h-5z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M25 5h-3V4a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v1H7a2 2 0 0 0-2 2v21a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2M12 4h8v4h-8Zm13 24H7V7h3v3h12V7h3Z"></path>
+            </svg>
+
+            <span class="mx-3">{{ __('Reports') }}</span>
         </a>
 
         <a class="flex items-center px-6 py-4 text-gray-100 bg-opacity-25" href="{{ route('logout') }}" @click.prevent="$root.submit();">
